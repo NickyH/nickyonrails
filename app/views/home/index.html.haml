@@ -1,0 +1,39 @@
+#top
+  #nav
+    .rounded.mysubheader2= 'About'
+    .rounded.mysubheader2= 'Skills'
+    .rounded.mysubheader2= 'Projects'
+  #headers
+    .myheader= 'nickyonrails'
+    .mysubheader= 'web dev portfolio'
+
+.main
+  .skills-right-empty
+    .mypic= image_tag 'nickybw.jpg'
+  .indented.mysubheader3= 'About'
+  .skills-header= "Nicky Hughes Rails Developer"
+  .skills= "I recently graduated from General Assemb.ly’s Rails-oriented Web Development Immersive program in New York and am looking for a position as a junior full-stack developer, or as a front-end developer with Rails experience. I have 8 years of experience as an architect and designer, and have also been a freelance writer."
+
+.main
+  .indented.mysubheader3.fullheight= 'Skills'
+  .skills-header= "Back-End Web Development"
+  .skills= "Ruby on Rails, PostgreSQL, RSpec, Capybara, AJAX"
+  .skills-header= "Front-End Web Development"
+  .skills= "HTML5, Javascript, CSS3, HAML, Sass, JQuery, Coffeescript, Underscore.js, Ember.js"
+  .skills-header= "Project Management"
+  .skills= "GitHub, Pivotal Tracker, Agile Software Development"
+
+.main
+  .indented.mysubheader3= 'Projects'
+.projectnav
+  .project-headers= link_to('Recipezy', recipezy_home_index_path, :remote => true)
+  .project-headers= link_to("Moviez", moviez_home_index_path, :remote => true)
+  .project-headers= link_to("Flickr Pickr", flickr_home_index_path, :remote => true)
+  .project-headers= link_to("Team8", team8_home_index_path, :remote => true)
+  .project-headers= link_to('Interviewr', interviewr_home_index_path, :remote => true)
+
+#projects
+  #project-container
+    = render 'recipezy'
+%br
+#bottom
