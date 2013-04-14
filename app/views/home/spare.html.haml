@@ -1,0 +1,59 @@
+.row
+
+#projects
+  #project-container
+    .projects= image_tag('recipezy1.png')
+    .projects= image_tag('flickr-pickr4.png')
+
+
+.row
+  .small-2.columns
+    .mysubheader3= 'About'
+  .small-4.columns
+    .skills-header= "Nicky Hughes Rails Developer"
+    .mypic= image_tag 'nickybw.jpg'
+  .small-6.columns
+    .skills= "I recently graduated from General Assemb.ly’s Rails-oriented Web Development Immersive program in New York and am looking for a position as a junior full-stack developer, or as a front-end developer with Rails experience. I have 8 years of experience as an architect and designer, and have also been a freelance writer."
+    .rounded-mini.mysubheader4= link_to('Blog', "http://nickyonrails.tumblr.com/", :target => 'blank')
+    .rounded-mini.mysubheader4= link_to('LinkedIn', 'http://www.linkedin.com/in/nickyjhughes', :target => 'blank')
+    .rounded-mini.mysubheader4= link_to('Github', 'https://github.com/nickyh', :target => 'blank')
+    .rounded-mini.mysubheader4= link_to('Twitter', 'https://twitter.com/nichug00', :target => 'blank')
+
+
+.row
+  .small-2.columns
+    .mysubheader3= 'Skills'
+  .small-4.columns
+    .skills-header= "Back-End Web Development"
+  .small-6.columns
+    .skills= "Ruby on Rails, PostgreSQL, RSpec, Capybara, AJAX"
+.row
+  .small-2.columns
+    .mysubheader3
+  .small-4.columns
+    .skills-header= "Front-End Web Development"
+  .small-6.columns
+    .skills= "HTML5, Javascript, CSS3, HAML, Sass, JQuery, Coffeescript, Underscore.js, Ember.js"
+.row
+  .small-2.columns
+    .mysubheader3
+  .small-4.columns
+    .skills-header= "Project Management"
+  .small-6.columns
+    .skills= "GitHub, Pivotal Tracker, Agile Software Development"
+
+.row
+  .small-2.columns
+    .mysubheader3= 'Projects'
+
+.projectnav
+  .small-4.columns
+    .project-headers= link_to('Recipezy', recipezy_home_index_path, :remote => true)
+    .project-headers= link_to("Moviez", moviez_home_index_path, :remote => true)
+    .project-headers= link_to("Flickr Pickr", flickr_home_index_path, :remote => true)
+    .project-headers= link_to("Team8", team8_home_index_path, :remote => true)
+    .project-headers= link_to('Interviewr', interviewr_home_index_path, :remote => true)
+
+
+%br
+#bottom

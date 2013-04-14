@@ -1,63 +1,99 @@
-#top
-  #nav
-    .rounded.mysubheader2= 'About'
-    .rounded.mysubheader2= 'Skills'
-    .rounded.mysubheader2= 'Projects'
-  #headers
-    .myheader= 'nickyonrails'
-    .mysubheader= 'web dev portfolio'
+#topspacer.hide-for-small
+
+.row.toprow.header
+  .large-4.small-12.columns.large-offset-1
+    #mainheader= 'nickyonrails'
+
+  .large-8.small-12.columns
+    .row
+      .small-4.columns
+        .rounded.mysubheader2= link_to('About', '#about')
+      .small-4.columns
+        .rounded.mysubheader2= link_to('Projects', '#portfolio1')
+      .small-4.columns
+        .rounded.mysubheader2= link_to('Contact', '#contact')
 
 
-.row
-  .small-2.columns
-    .mysubheader3= 'About'
-  .small-4.columns
-    .skills-header= "Nicky Hughes Rails Developer"
-    .mypic= image_tag 'nickybw.jpg'
-  .small-6.columns
-    .skills= "I recently graduated from General Assemb.ly’s Rails-oriented Web Development Immersive program in New York and am looking for a position as a junior full-stack developer, or as a front-end developer with Rails experience. I have 8 years of experience as an architect and designer, and have also been a freelance writer."
-    .rounded-mini.mysubheader4= link_to('Blog', "http://nickyonrails.tumblr.com/", :target => 'blank')
-    .rounded-mini.mysubheader4= link_to('LinkedIn', 'http://www.linkedin.com/in/nickyjhughes', :target => 'blank')
-    .rounded-mini.mysubheader4= link_to('Github', 'https://github.com/nickyh', :target => 'blank')
-    .rounded-mini.mysubheader4= link_to('Twitter', 'https://twitter.com/nichug00', :target => 'blank')
 
 
-.row
-  .small-2.columns
-    .mysubheader3= 'Skills'
-  .small-4.columns
-    .skills-header= "Back-End Web Development"
-  .small-6.columns
-    .skills= "Ruby on Rails, PostgreSQL, RSpec, Capybara, AJAX"
-.row
-  .small-2.columns
-    .mysubheader3
-  .small-4.columns
-    .skills-header= "Front-End Web Development"
-  .small-6.columns
-    .skills= "HTML5, Javascript, CSS3, HAML, Sass, JQuery, Coffeescript, Underscore.js, Ember.js"
-.row
-  .small-2.columns
-    .mysubheader3
-  .small-4.columns
-    .skills-header= "Project Management"
-  .small-6.columns
-    .skills= "GitHub, Pivotal Tracker, Agile Software Development"
+<!-- project 1 recipezy  new page -->
 
-.row
-  .small-2.columns
-    .mysubheader3= 'Projects'
 
-.projectnav
-  .small-4.columns
-    .project-headers= link_to('Recipezy', recipezy_home_index_path, :remote => true)
-    .project-headers= link_to("Moviez", moviez_home_index_path, :remote => true)
-    .project-headers= link_to("Flickr Pickr", flickr_home_index_path, :remote => true)
-    .project-headers= link_to("Team8", team8_home_index_path, :remote => true)
-    .project-headers= link_to('Interviewr', interviewr_home_index_path, :remote => true)
+#portfolio1
 
-#projects
-  #project-container
-    = render 'recipezy'
-%br
-#bottom
+  #recipezy
+  .row
+    .large-6.small-8.small-centered.columns.arrows
+      = link_to(image_tag('up_arrow.png'), '#topspacer')
+  .row
+    .large-8.small-8.small-centered.columns
+      .project_header= "Recipezy"
+      .projects-large= image_tag('recipezy1.png')
+      #project_text= "Recipezy came about because I love to cook but never seem to keep track of all the various recipes I come across on line or in magazines or books. This site allows you to store recipes in your own online account. Users require an email address and password to access their recipes, but can view all recipes of other users and them to their collection. Users can also see the estimated cost of a recipe based on the ingredient list and quantities. There is a cooking terms glossary that will automatically add a link to keywords in a user's recipe which will link to a tutorial video on the site. The initial version of this project was in Rails, while the second version was a more dynamic site using JavaScript and AJAX."
+  .row
+    .large-8.small-10.small-centered.columns
+      .arrows= link_to(image_tag('down_arrow.png'), '#team8')
+
+
+
+<!-- project 2 team8 new page -->
+
+
+#portfolio2
+  #team8
+    .row
+      .large-6.small-8.small-centered.columns.arrows
+        = link_to(image_tag('up_arrow.png'), '#recipezy')
+    .row
+      .large-8.small-8.small-centered.columns
+        .project_header= "Team8"
+        .projects-large= image_tag('team8_1.png')
+        #project_text= "Team8 is team sport organizer and came about because in all the sports teams I'm on there is not an easy way to invite players to games other than by group email invitation. This site allows a user to be either a team member or a team manager. It lists all of the users teams, and if they are a manager of a team, allows them to edit team information and invite players to games. A manager can upload an XLS or CSV file (which is then stored in an Amazon bucket) which populates the draw for the team's upcoming season. Team members can then sign up and add their user profiles. The user's main page will show them their list of teams, and the date and location of the next game they have. If the user is the team manager, they can then drag and drop player photos from their list of available players, and this will invite those players to the game. Team8 is a Rails site using lots of AJAX and JavaScript, CoffeeScript, HAML and JQuery."
+    .row
+      .large-8.small-10.small-centered.columns
+        .arrows= link_to(image_tag('down_arrow.png'), '#boggle')
+
+
+
+<!-- project 3 boggle new page -->
+
+
+#portfolio3
+  #boggle
+    .row
+      .large-6.small-8.small-centered.columns.arrows
+        = link_to(image_tag('up_arrow.png'), '#boggle')
+    .row
+      .large-8.small-8.small-centered.columns
+        .project_header= "Boggle"
+        .projects-large= image_tag('boggle.png')
+        #project_text= "Boggle is one my favourite word games that I play for hours with my family on summer vacations. So I decided I wanted to make an online, multi-player Boggle game so that I can still play Boggle with my family even when it's not summer! The game uses the Pusher gem to allow for the multi-player communication. I'm using Twilio allow users to invite new players to their game, and lots of Ruby logic and JavaScripty to make the game itself work."
+    .row
+      .large-8.small-10.small-centered.columns
+        .arrows= link_to(image_tag('down_arrow.png'), '#about')
+
+
+
+
+#about
+  .row
+    .large-8.small-10.small-centered.columns
+      .bioheader= "About me..."
+      .bio= "I'm a full-stack Rails developer with a creative flair and a passion for creating things that look awesome. I recently graduated from General Assemb.ly’s Rails-oriented Web Development Immersive program in New York. I am currently looking for a position as a junior full-stack developer, or as a front-end developer with strong Rails knowledge. I'm interested in companies that are passionate about what they do, because I'm passionate about what I do."
+      .skills= "What I know: Ruby on Rails, JavaScript, AJAX, HTML5, CSS3, Agile Development, Test-Driven-Developemnt with Rspec and Capybara, PostgreSQL, Git, Ember.js, JQuery, Pivotal Tracker, Foundation, Bootstrap, HAML, Sass, Coffeescript...to name a few..."
+
+
+#contact
+  .row
+    .large-8.small-10.small-centered.columns
+      .arrow-final= link_to(image_tag('up_arrow.png'), '#topspacer')
+      .contact= "contact"
+      .social= link_to(image_tag('linkedin.png'), 'http://www.linkedin.com/in/nickyjhughes', :target => '_blank')
+      .social= link_to(image_tag('twitter.png'), 'https://twitter.com/nichug00', :target => '_blank')
+      .social= link_to(image_tag('tumblr.png'), 'http://nickyonrails.tumblr.com/', :target => '_blank')
+
+
+
+
+
+

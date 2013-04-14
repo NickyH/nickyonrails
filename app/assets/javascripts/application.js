@@ -5,5 +5,4 @@
 //= require 'underscore-min'
 //= require 'foundation/js/vendor/custom.modernizr.js'
 //= require 'foundation/js/foundation.min.js'
-//= require 'the-tooltip.js'
 //= require 'nicky.js'
