@@ -71,14 +71,44 @@
     .row
       .large-8.small-8.small-centered.columns
         .project_header= "Boggle"
-        .projects-large= link_to(image_tag('boggle2.png'), 'http://powerful-garden-1182.herokuapp.com/', :target => '_blank')
+        .projects-large= link_to(image_tag('boggle.png'), 'http://powerful-garden-1182.herokuapp.com/', :target => '_blank')
         #project_text= "Boggle is one my favourite word games that I play for hours with my family on summer vacations. So I decided I wanted to make an online, multi-player Boggle game so that I can still play Boggle with my family even when it's not summer! The game uses the Pusher gem to allow for the multi-player communication. I'm using Twilio allow users to invite new players to their game, and lots of Ruby logic and JavaScripty to make the game itself work."
     .row
       .large-8.small-10.small-centered.columns
+        .arrows= link_to(image_tag('down_arrow.png'), '#lunchtrackr')
+
+<!-- project 4 lunchtrackr new page -->
+
+
+#portfolio4
+  #lunchtrackr
+    .row
+      .large-6.small-8.small-centered.columns.arrows
+        = link_to(image_tag('up_arrow.png'), '#boggle')
+    .row
+      .large-8.small-8.small-centered.columns
+        .project_header= "Lunch Trackr"
+        .projects-large= link_to(image_tag('lunchtrackr.png'), 'http://lunchtrackr.herokuapp.com/', :target => '_blank')
+        #project_text= "Lunch Trackr uses Rails, CoffeeScript, HAML and AJAX to store and display restaurant options. An administrator can add, edit and delete restaurants. And every user can add reviews about a restaurant, and make comments on reviews. The whole app is one page, so uses a lot of AJAX calls. The is also full text search on the restaurant names, and the ability to filter restaurant choices by clicking on one of the default tags, such as 'vegetarian'. There is a also an address validation function that ensures only restaurants with accurate addresses are entered in to the database. This is done using Google Geocoder."
+    .row
+      .large-8.small-10.small-centered.columns
+        .arrows= link_to(image_tag('down_arrow.png'), '#memory')
+
+
+<!-- project 5 lunchtrackr new page -->
+#portfolio5
+  #memory
+    .row
+      .large-6.small-8.small-centered.columns.arrows
+        = link_to(image_tag('up_arrow.png'), '#lunchtrackr')
+    .row
+      .large-8.small-8.small-centered.columns
+        .project_header= "Memory Game"
+        .projects-large= link_to(image_tag('memory.png'), 'http://nickyh.github.io/memory_game/', :target => '_blank')
+        #project_text= "I created this memory game primarily as an exercise in developing my JavaScript skills. Without the familiarity of Rails to assist me, I used this project to delve into DOM manipulation using, initially just JavaScript. Once I felt comfortable with the JavaScript I added in some JQuery functionality for the sake of the simplicity of the code. I use CSS3 transform function to show each card 'flipping' over when it is selected. Click on the project to play."
+    .row
+      .large-8.small-10.small-centered.columns
         .arrows= link_to(image_tag('down_arrow.png'), '#about')
-
-
-
 
 #about
   .row
